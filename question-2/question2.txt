@@ -1,0 +1,17 @@
+for no 2 answer is installing quota : 
+What need to do ? 
+1. apt-get update 
+2. apt-get install 
+3. quota --version 
+4. find /lib/modules/ -type f -name '*quota_v*.ko*'
+5. sudo apt install linux-image-extra-virtual
+6. sudo nano /etc/fstab -> add usrquota, grpquota 
+7. sudo mount -o remount /
+8. cat /proc/mounts | grep ' / '
+9. sudo quotacheck -ugm /
+10. sudo quotaon -v /
+11. sudo setquota -u sammy 200M 220M 0 0 /
+12. sudo quota -vs sammy
+13. sudo setquota -t 864000 864000 /
+
+
